@@ -1,0 +1,275 @@
+<!DOCTYPE HTML5>
+<html lang="pt-br">
+	<head>
+		<title>Cadastro</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="_css/style.css" rel="stylesheet"/>
+		<script src="_js/funcao.js"></script>
+		<script type="text/javascript">
+
+	function validaFormDadosPessoais(){
+		var formulario = document.forms["dadospessoais"]
+		var nome = formulario.nome.value
+		
+		if (nome.indexOf(" ")==-1){
+			alert("Preencha o nome completo!")
+			return false
+		}
+	}
+			</script>
+	</head>
+	
+	<body>
+	
+	<div id="corpo">
+		<form id="dadospessoais" action="newUser.php" method="get" onSubmit="return validaFormDadosPessoais()">
+		<div id="intro">
+		<p>N° de Registro<input type="text" name="nReg" id="cReg" size="12" maxlength="12"> Data:<input type="date" name="intData" id="cintData"> Entrevistador:<input type="text" name="tIntre" id="cIntre" size="15" maxlength="25"> </p>
+	</div>
+		
+		<!DADOS PESSOAIS>
+		
+		<fieldset>
+		<legend>DADOS PESSOAIS</legend>
+		<p>Nome:<input type="text" name="NO_CLIENTE" id="NO_CLIENTE" size="50" maxlength="90" placeholder="Nome Completo">
+		Data de Nascimento:<input type="date" name="DT_NASCIMENTO" id="DT_NASCIMENTO" />   
+		Sexo: <input type="radio" value="M" name="SEXO" id="SEXO_M">M 
+		<input type="radio" value="F" name="SEXO" id="SEXO_F" />F
+		<p>			
+		Bairro: <input type="text" name="NO_BAIRRO" id="NO_BAIRRO" size="20" maxlength="50"/>
+		Endereço: <input type="text" name="NO_ENDERECO" id="NO_ENDERECO" size="60" maxlength="120"/><br> 
+		Cidade:<input type="text" name="NO_CIDADE" id="NO_CIDADE" />                
+		Cep: <input type="text" name="CEP" id="CEP" size="8" maxlength="8" /></p>
+		
+		Residencia: 
+		<input type="radio" name="TP_RESIDENCIA" id="TP_RESIDENCIA_CASA" value="casa"/>Casa 
+		<input type="radio" name="TP_RESIDENCIA" id="TP_RESIDENCIA_BARRACO" value="barraco" />Barraco 
+		<input type="radio" name="TP_RESIDENCIA" id="TP_RESIDENCIA_APARTAMENTO" value="apartamento" />Apartamento 
+		
+		Paga aluguel: <input type="radio" value="S" name="ALUGUEL" id="ALUGUEL_S"/>Sim 
+		<input type="radio" name="ALUGUEL" value="N" id="ALUGUEL_N"/>Não
+		</p>
+		
+		Nome do Pai:<input type="text" name="CLIENT_PAI" id="CLIENT_PAI" size="50" maxlength="90"/>
+		Nome da Mãe:<input type="text" name="CLIENT_MAE" id="CLIENT_MAE" size="50" maxlength="90"/>
+		<p>Naturalidade:<input type="text" name="NATURALIDADE" id="NATURALIDADE" size="15" maxlength="15"/>                    
+		<label for="uf">UF:</label>
+		<select name="NO_UF" id="NO_UF">
+					<option value="AC">AC</option>
+					<option value="AL">AL</option>
+					<option value="AP">AP</option>
+			        <option value="AM">AM</option>
+				    <option value="BA">BA</option>
+				    <option value="CE">CE</option>
+				    <option value="DF">DF</option>
+				    <option value="ES">ES</option>
+					<option value="GO">GO</option>
+					<option value="MA">MA</option>
+					<option value="MT">MT</option>
+					<option value="MS">MS</option>
+					<option value="MG">MG</option>
+					<option value="PA">PA</option>
+					<option value="PB">PB</option>
+					<option value="PR">PR</option>
+					<option value="PE">PE</option>
+					<option value="PI">PI</option>
+					<option value="RJ">RJ</option>
+					<option value="RN">RN</option>
+					<option value="RS">RS</option>
+					<option value="RO">RO</option>
+					<option value="RR">RR</option>
+					<option value="SC">SC</option>
+					<option value="SP">SP</option>
+					<option value="SE">SE</option>
+					<option value="TO">TO</option>
+	
+		</select>
+		</p>  
+		<p>
+		Estado Civil: <input type="radio" name="ESTADO_CIVIL" id="ESTADO_CIVIL_CASADO" value="CASADO" />Casado 
+		<input type="radio" name="ESTADO_CIVIL" id="ESTADO_CIVIL_SOLTEIRO" value="SOLTEIRO" />Solteiro 
+		<input type="radio" name="ESTADO_CIVIL" id="ESTADO_CIVIL_VIUVO" value="VIUVO" />Viuvo(a)  
+		<input type="radio" name="ESTADO_CIVIL" id="ESTADO_CIVIL_OUTROS" value="OUTROS"/>Outros:
+		</p>
+		
+		Fone:<input type="tel" name="TELEFONE_RES" id="TELEFONE_RES"/> Outros:<input type="tel" name="TELEFONE_CEL" id="TELEFONE_CEL"/>                  
+		Email:<input type="email" name="EMAIL" id="EMAIL"/>
+		</fieldset>
+		
+		<! DOCUMENTAÇÃO>
+		
+		<fieldset>
+		<legend>DOCUMENTAÇÃO</legend>
+		
+		<p>C2:<input type="text" name="N_C2" id="N_C2"/> 					 Orgão Exp:<input type="text" size="5" maxlength="5" name="ORGAO_EXP" id="ORGAO_EXP"/>  			    CPF:<input type="text" name="CPF" id="CPF" size="11" maxlegth="11"/></p>
+		<p>Certidão de Nascimento N°:<input type="text" name="N_CERTIDAO_NASC" id="N_CERTIDAO_NASC"/> Livro N°:<input type="text" name="N_CERTIDAO_NASC_LIVRO" id="N_CERTIDAO_NASC_LIVRO"/> 	
+		Folha N°<input type="text" name="N_CERTIDAO_FOLHA" id="N_CERTIDAO_NASC_FOLHA"/></p>
+		
+		<p>Certidão de Casamento N°:<input type="text" name="N_CERTIDAO_CASAMENTO" id="N_CERTIDAO_CASAMENTO"/>Livro N°:<input type="text" name="N_CERTIDAO_CASAMENTO_LIVRO" id=N_CERTIDAO_LIVRO/>  	Folha N°<input type="text" name="N_CERTIDAO_CASAMENTO_FOLHA" id=N_CERTIDAO_CASAMENTO_FOLHA/></p>
+		Cartorio:<input type="text" name="CARTORIO" id="CARTORIO"/>
+		</fieldset>
+		
+		<!ESCOLARIDADE>
+		
+		<fieldset>
+		<legend>Escolaridade</legend>
+		
+		<input type="radio" name="ESCOLARIDADE" id="ESCOLARIDADE_ANALFABETO"/>Analfabeto
+		<input type="radio" name="ESCOLARIDADE" id="ESCOLARIDADE_1_GRAU"/>1°Grau-Série: 
+		<input type="radio" name="ESCOLARIDADE" id="ESCOLARIDADE_1_GRAU_C"/>1°Grau Completo 
+		<input type="radio" name="ESCOLARIDADE" id="ESCOLARIDADE_SUPERIOR_C"/>Superior Completo
+		<input type="radio" name="ESCOLARIDADE" id="ESCOLARIDADE_ENSINO_ESP"/>Ensino Especial 
+		<input type="radio" name="ESCOLARIDADE" id="ESCOLARIDADE_2_GRAU"/>2°Grau-Série: 
+		<input type="radio" name="ESCOLARIDADE" id="ESCOLARIDADE_2_GRAU_C"/>2°Grau Completo 
+		<input type="radio" name="ESCOLARIDADE" id="ESCOLARIDADE_SUPERIOR_INC"/>Superior Incompleto
+		<p>Instituição:<input type="text" name="INSTITUICAO_ENSINO" id="INSTITUICAO_ENSINO" size="30" maxlength="30"/></p>
+		</fieldset>
+	
+		
+		<fieldset>
+		<legend>PROFISSÃO</legend>
+		
+		Profissão:<input type="text" size="20" maxlegth="20"/>   							
+		Trabalha na Profissão: <input type="radio" name="T_PROFISSAO" id="T_PROFISSAO_S"/>Sim 
+		<input type="radio" name="T_PROFISSAO" id="T_PROFISSAO_N"/>Não
+		Porque / Em Que:<input/>
+		<p>Quer Trabalhar: <input type="radio" name="TRABALHAR" id="TRABALHAR_S"/>Sim 
+		<input type="radio" name="TRABALHAR" id="TRABALHAR_N"/>Não  				
+		Porque / Em Que:<textarea name="trabalhoText" cols="25" rows="2"></textarea></p>
+		
+		<p>Quer Fazer Curso Profissionalizante: <input type="radio" name="CURSO_P" id="CURSO_P_S">Sim 
+		<input type="radio" name="CURSO_P" id="CURSO_P_N" />Não  				
+		Qual:<input type="text" name="cursoQual" size="25" maxlegth="30"/></p>
+		</fieldset>
+		
+		<fieldset>
+		<legend>ESPORTES</legend>
+		
+		<p>Tem Condições de Praticar Esportes: <input type="radio" name="PRATICAR_ESPORTES" id="PRATICAR_ESPORTES_S"/>Sim 
+		<input type="radio" name="PRATICAR_ESPORTES" id="PRATICAR_ESPORTES_N"/>Não</p>
+		                 
+		<p>Qual:   <input type="radio" name="ESPORTE_QUAL"/>Basquetebol em Cadeira de Rodas  
+		<input type="radio" name="ESPORTE_QUAL" id="ESPORTE_QUAL_FUTSAL"/>Futsal  
+		<input type="radio" name="ESPORTE_QUAL" id="ESPORTE_QUAL_NATAÇÃO"/>Natação  
+		<input type="radio" name="ESPORTE_QUAL" id="ESPORTE_QUAL_TENIS_MESA"/>Tênis de Mesa 
+		<input type="radio" name="ESPORTE_QUAL" id="ESPORTE_QUAL_ATLETISMO"/>Atletismos 
+		<input type="radio" name="ESPORTE_QUAL" id="ESPORTE_QUAL_TENIS_QUADRA"/>Tênis de Quadra 
+		<input type="radio" name="ESPORTE_QUAL" id="ESPORTE_QUAL_VOLEI"/>Voleibol </p>
+		<input type="radio" name="ESPORTE_QUAL" id="ESPORTE_QUAL_OUTROS"/>Outros:
+		<input type="text" size="25" maxlength="20"/>
+		</fieldset>
+		
+		<fieldset>
+		<legend>TIPO DE DEFICIÊNCIA</legend>
+		
+		<input type="radio" name="DEFICIENCIA" id="DEFICIENCIA_FISICA"/>Fisica 
+		<input type="radio" name="DEFICIENCIA" id="DEFICIENCIA_MENTAL"/>Mental 
+		<input type="radio" name="DEFICIENCIA" id="DEFICIENCIA_VISUAL"/>Visual 
+		<input type="radio" name="DEFICIENCIA" id="DEFICIENCIA_AUDITIVA"/>Auditiva
+		<input type="radio" name="DEFICIENCIA" id="DEFICIENCIA_MULTI"/>Multipla 
+		<input type="radio" name="DEFICIENCIA" id="DEFICIENCIA_OUTRAS"/>Outras:
+		
+		Descrever Deficiência:<textarea cols="15" rows="2" maxlength="200" name="DESC_DEFICIENCIA" id="DESC_DEFICIENCIA"></textarea>
+		
+		<p>Quando Adquiriu a Deficiência:<input type="date" name="deficienciaTime"/></p>
+		<p>Qual Mecanismo que Criou a Deficiência:
+		<input type="radio" name="DEFICIENCIA_HOW" id="DEFICIENCIA_HOW_DOENCA"/>Doença 
+		<input type="radio" name="DEFICIENCIA_HOW" id="DEFICIENCIA_HOW_ACIDENTE"/>Acidente 
+		<input type="radio" name="DEFICIENCIA_HOW" id="DEFICIENCIA_HOW_ARMA"/>Arma 
+		<input type="radio" name="DEFICIENCIA_HOW" id="DEFICIENCIA_HOW_NASC"/>De Nascença
+		 <input type="radio" name="DEFICIENCIA_HOW" id="DEFICIENCIA_HOW_OUTRA"/>Outra
+		 
+		 <input type="text" name="DEFICIENCIA_HOW_OUTRA" id="DEFICIENCIA_HOW_C" size="25" maxlength="20"/></p>
+		</fieldset>
+		
+		<fieldset>
+		<legend>REABILITAÇÃO FISICA</legend>
+		<p>
+		Faz: <input type="radio" name="REABILITACAO" id="REABILITACAO_S"/>Sim 
+		<input type="radio" name="REABILITACAO" id="REABILITACAO_N"/>Não 
+		<input type="radio" name="REABILITACAO" id="REABILITACAO_J"/>Já Fez
+		</p>
+		
+		<input type="radio" name="REABILITACAO_TIME" id="REABILITACAO_C"/>Completa 
+		<input type="radio" name="REABILITACAO_TIME" id="REABILITACAO_I"/>Incompleta
+		Onde:<input type="text" size="30" maxlegth="25" name="REABILITACAO_ONDE" id="REABILITACAO_ONDE"/>
+		Não Fez Porquê:<textarea cols="20" rows="2" name="REABILITACAO_N_PORQ" id="reabilitacaoPorque"></textarea>
+		</fieldset>
+		
+		<fieldset>		
+		<legend>LOCOMOÇÃO</legend>
+		
+		<p>O Que Utiliza Para Locomover:</p>
+		<input type="radio" name="LOCOMOCAO" id="LOCOMOCAO_BENGA"/>Bengalas 
+		<input type="radio" name="LOCOMOCAO" id="LOCOMOCAO_MULETAS"/>Muletas 
+		<input type="radio" name="LOCOMOCAO" id="LOCOMOCAO_CADEIRA"/>Cadeira de Rodas 
+		<input type="radio" name="LOCOMOCAO" id="LOCOMOCAO_NADA"/>Nada 	
+		<input type="radio" name="LOCOMOCAO" id="LOCOMOCAO_OUTRAS"/>Outras
+		
+		<p>Aparelho</p>
+		<input type="radio" name="APARELHO" id="APARELHO_TEM"/>Tem 	
+		<input type="radio" name="APARELHO" id="APARELHO_N_TEM"/>Não tem 	
+		<input type="radio" name="APARELHO" id="APARELHO_NECESSITA"/>Necessita
+		Qual:<input type="text" size="30" maxlegth="25"/>
+		
+		Condições de uso: 
+		<input type="radio" name="CONDICOES" id="CONDICOES_BOA"/>Boa 	
+		<input type="radio" name="CONDICOES" id="CONDICOES_REG"/>Regular 	
+		<input type="radio" name="CONDICOES" id="CONDICOES_RUIM"/>Ruim 
+		Qual Reparo:<textarea rows="2" cols="15"></textarea>
+		</fieldset>
+		
+		<fieldset>
+		<legend>Saúde / Tratamento</legend>
+					
+		<input type="radio" name="SAUDE" id="SAUDE_BOA"/>Boa(Não Necessita de Tratamento) 	
+		<input type="radio" name="SAUDE" id="SAUDE_REG"/>Regular(Necessita de Cuidador) 	
+		<input type="radio" name="SAUDE" id="SAUDE_RUIM"/>Ruim(Necessita de Tratamento Urgente) 
+		
+		<p>
+		<input type="radio" name="TRATAMENTO" id="TRATAMENTO_ONDE">Faz Tratamento - Onde? 		
+		<input type="radio" name="TRATAMENTO" id="TRATAMENTO_PORQ"/>Não Faz Tratamento - Por Quê?
+		</p>
+		
+		Concluiu Tratamento Medico:
+		<input type="radio" name="TRAT_MEDICO" id="TRAT_MEDICO_S"/>Sim 		
+		<input type="radio" name="TRAT_MEDICO" id="TRAT_MEDICO_N"/>Não  
+		Por quê? <textarea name="TRAT_MEDICO_PORQ" id="" cols="30" rows="2"></textarea>
+		</fieldset>
+		
+		<fieldset>
+		<legend>Outros</legend>
+		
+		N° de Deficiêntes na Familia:<input type="number" name="N_DEFICIENTES" id="N_DEFICIENTES" />
+		Renda Familiar:
+		<input type="radio" name="SALARIO" id="SALARIO_1"/>1 Salário 	
+		<input type="radio" name="SALARIO" id="SALARIO_2"/>2 Salários 	
+		<input type="radio" name="SALARIO" id="SALARIO_3"/>3 Salários 	
+		<input type="radio" name="SALARIO" id="SALARIO_3_M"/>+ De 3 Salários
+		
+		Previdência:
+		<input type="radio" name="PREVIDENCIA" id="PREVIDENCIA_DEP"/>Depende 	
+		<input type="radio" name="PREVIDENCIA" id="PREVIDENCIA_PENS">Pensionista 	
+		<input type="radio" name="PREVIDENCIA" id="PREVIDENCIA_APOS"/>Aposentado 	
+		<input type="radio" name="PREVIDENCIA" id="PREVIDENCIA_CONTRI"/>Contribuente 	
+		<input type="radio" name="PREVIDENCIA" id="PREVIDENCIA_NOT"/>Não Tem Previdência 
+		<input type="radio" name="PREVIDENCIA" id="PREVIDENCIA_OUTROS"/>Outros
+		
+		Gostaria de Participar Das Atividades Desenvolvidas Pela Comissão Jovem: 	
+		<input type="radio" name="PARTICIPAR" id="participarS"/>Sim 	
+		<input type="radio" name="PARTICIPAR" id="participarN"/>Não
+		Por quê:<input type="text" name="PARTICIPAR_PORQ" id="PARTICIPAR_PORQ"/>
+		
+		<p>Obs Comentário do Entrevistador(Humor, Vícios de Defiente, Reclamações):<textarea cols="20" rows="2" id="comentario"></textarea></p>
+		</fieldset>
+		
+		<div align="right">
+			<input type="submit" name="finalizar" value="Finalizar">
+			</div>
+			
+		</form>
+	</div>
+	</body>
+</html>

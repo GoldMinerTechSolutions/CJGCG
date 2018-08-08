@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+div#corpo{
+	width: 1000px;
+	position: relative;
+	margin: 0px auto;
+	box-shadow: 0px 0px 10px black;
+	padding: 15px;
+}
+
+legend{
+	font-family: verdana;
+	font-size: 15px;
+}
+
+input.name{
+	font-size: 15px;
+}
+input{
+	margin: 2px 3px;
+}
+input#botenviar{
+	margin-left: 450px;
+	width: 100px;
+	height: 50px;
+}
+areatext{
+	margin-bottom: px;
+}
+input [type=text] {
+	font-size: 15px;
+}
