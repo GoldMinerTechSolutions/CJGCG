@@ -23,8 +23,8 @@ class Dispatcher
         $file = ROOT . 'Controllers'. '\\' . $name . '.php';
         require($file);
 
-        $teste = new tasksController();
-        $teste->index();
+        $task = new tasksController();
+        $task->index();
 
         $controller = new $name();
         return $controller;
